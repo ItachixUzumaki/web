@@ -1,9 +1,17 @@
-/* Font Family  */
-@font-face { font-family: 'AngryBirds'; src: url('BIN/fonts/angrybirds-regular.ttf') format('truetype');}
-@font-face { font-family: 'naruto'; src: url('BIN/fonts/naruto.ttf') format('truetype');}
+/* Font Family */
+@font-face {
+    font-family: 'AngryBirds';
+    src: url('BIN/fonts/angrybirds-regular.ttf') format('truetype');
+}
 
+@font-face {
+    font-family: 'naruto';
+    src: url('BIN/fonts/naruto.ttf') format('truetype');
+}
 
-*, ::before, ::after {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     transition: .3s;
@@ -15,8 +23,8 @@ video {
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     pointer-events: none;
     z-index: -1;
@@ -26,10 +34,11 @@ video {
 .container {
     max-width: 950px;
     margin: auto;
+    padding: 0 20px; /* Add padding for better spacing */
 }
 
 .navbar {
-    padding: 12px 10px;
+    padding: 12px 0;
 }
 
 .navbar .container {
@@ -39,7 +48,7 @@ video {
 }
 
 .navbar .logo {
-	font-family: 'AngryBirds', sans-serif;
+    font-family: 'AngryBirds', sans-serif;
     text-decoration: none;
     font-size: 2rem;
 }
@@ -50,7 +59,6 @@ video {
 }
 
 .navbar ul a {
-    display: block;
     text-decoration: none;
     margin: 0 10px;
     padding: 8px 16px;
@@ -64,12 +72,12 @@ video {
 
 .page-content {
     text-align: center;
-    margin-top: 12rem;
+    margin-top: 6rem;
     padding: 0 10px;
 }
 
 .page-content .inner-content .heading {
-    font-size: 16rem;
+    font-size: 6rem;
     font-family: 'AngryBirds', sans-serif;
 }
 
@@ -84,7 +92,6 @@ video {
 }
 
 .page-content .buttons a {
-    display: block;
     font-family: 'AngryBirds', sans-serif;
     text-decoration: none;
     margin: 0 16px;
@@ -119,7 +126,7 @@ video {
     z-index: -1;
 }
 
-.page-content .buttons a:nth-child(2):hover::before { 
+.page-content .buttons a:nth-child(2):hover::before {
     left: 100%;
 }
 
@@ -130,22 +137,20 @@ video {
 }
 
 .page-content .social-links {
-    margin-top: 6rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
 }
 
 .page-content .social-links a {
-    display: block;
     height: 40px;
     width: 40px;
     margin: 0 10px;
-    border-radius: 99px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    backdrop-filter: blur(160px);
     background: #c624f71e;
     overflow: hidden;
     position: relative;
@@ -163,40 +168,34 @@ video {
     z-index: -1;
 }
 
-.page-content .social-links a:hover::after { 
+.page-content .social-links a:hover::after {
     height: 100%;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
 }
 
 .card {
     font-family: 'naruto', sans-serif;
     font-size: 13px;
-    width: 225px;
-    height: 245px;
+    width: 100%;
+    max-width: 225px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     overflow: hidden;
-	position: relative;
+    position: relative;
     padding: 20px;
     box-sizing: border-box;
-	transition: width 0.3s ease-in-out;
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    transition: width 0.3s ease-in-out;
+    display: inline-block; /* Change to inline-block to maintain left-to-right row alignment */
     margin: 20px;
+    vertical-align: top; /* Align cards to the top of the row */
+    text-align: center;
 }
 
-h2, p {
+h2,
+p {
     font-family: 'AngryBirds', sans-serif;
     font-size: 15px;
-	color: #fff;
+    color: #fff;
     margin: 0;
 }
 
@@ -206,16 +205,17 @@ h2, p {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     box-sizing: border-box;
-    opacity: 0; /* Initially hide content */
-    transition: opacity 0.3s ease-in-out; /* Add transition for smooth opacity change */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .card:hover {
     transform: scale(1.05);
-	width: 155px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .card:hover .content {
@@ -224,21 +224,20 @@ h2, p {
 
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the cards horizontally */
     flex-wrap: wrap;
 }
 
 .round-image {
     width: 85%;
     height: auto;
-    border-radius: 100%;
-	object-fit: cover;
-	display: block;
-    margin: 0 auto 15px; /* Center the image */
-	transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card a {
-    pointer-events: auto; /* Ensure links are clickable */
-    /* other link styles... */
+    pointer-events: auto;
 }
