@@ -11,6 +11,20 @@
     color: #fff;
 }
 
+.loading-gif video {
+    width: 100%; /* Adjust the width to fill the container */
+    height: 100%; /* Adjust the height to fill the container */
+    object-fit: contain; /* Ensure the entire video is visible */
+    position: absolute; /* Position the video within the container */
+    top: 50%; /* Center the video vertically */
+    left: 50%; /* Center the video horizontally */
+    transform: translate(-50%, -50%); /* Center the video precisely */
+}
+
+.hide {
+    display: none;
+}
+
 video {
     position: absolute;
     left: 0;
