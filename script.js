@@ -35,3 +35,15 @@ function hideLoading() {
         document.querySelector('main').classList.remove('hide');
     }, 2700);
 }
+
+// Function to start playing the background video
+function playBackgroundVideo() {
+    var video = document.getElementById('backgroundVideo');
+    video.play();
+}
+
+// Listen for user interaction to start playing the video
+document.addEventListener('click', function() {
+    playBackgroundVideo();
+});
+
