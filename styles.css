@@ -17,66 +17,6 @@
     color: #fff;
 }
 
-/* Adjust layout for smaller screens */
-@media only screen and (max-width: 768px) {
-    .container {
-        max-width: 90%;
-        margin: auto;
-    }
-    
-    .navbar {
-        padding: 10px;
-    }
-    
-    .navbar .logo {
-        font-size: 1.5rem;
-    }
-    
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .navbar ul a {
-        margin: 5px 0;
-    }
-
-    .page-content .inner-content .heading {
-        font-size: 8rem;
-    }
-
-    .page-content .buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .page-content .buttons a {
-        margin: 5px;
-    }
-
-    .page-content .social-links {
-        margin-top: 3rem;
-    }
-
-    .page-content .social-links a {
-        margin: 0 5px;
-    }
-
-    .card {
-        width: calc(50% - 40px);
-        margin: 20px 0;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .round-image {
-        width: 80%;
-    }
-}
-
 .responsive-gif {
     max-width: 100%;
     height: auto;
@@ -176,12 +116,8 @@ video {
     padding: 10px 12px;
     border-radius: 6px;
     font-size: 13px;
-    min-width: 120px;
     text-align: center;
     position: relative;
-    backdrop-filter: blur(60px);
-    overflow: hidden;
-    z-index: 1;
     border: 1px solid #ffffff1e;
 }
 
@@ -230,7 +166,6 @@ video {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    backdrop-filter: blur(160px);
     background: #c624f71e;
     overflow: hidden;
     position: relative;
