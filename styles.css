@@ -25,7 +25,7 @@
         max-width: fit-content;
         margin: auto;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center align items on smaller screens */
     }
 
     .navbar {
@@ -41,12 +41,13 @@
     .navbar .logo {
         font-family: 'AngryBirds', sans-serif;
         text-decoration: none;
-        font-size: 1.5rem; /* Reduced font size */
+        font-size: 1.2rem; /* Reduced font size */
     }
 
     .navbar ul {
         list-style-type: none;
         display: flex;
+        justify-content: center; /* Center align menu items */
     }
 
     .navbar ul a {
@@ -56,24 +57,15 @@
         padding: 8px 12px; /* Reduced padding */
         font-family: 'AngryBirds', sans-serif;
         position: relative;
+        font-size: 0.9rem; /* Reduced font size */
     }
 
     .navbar ul:has(a:hover) a:not(:hover) {
         filter: blur(10px);
     }
 
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
     .navbar .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 12px;
-        right: 10px;
-        cursor: pointer;
-        opacity: 0;
-        z-index: -1;
+        display: none; /* Hide the menu toggle on smaller screens */
     }
 
     .menu-icon {
@@ -95,11 +87,11 @@
     }
 
     .page-content .inner-content .heading {
-        font-size: 10vw; /* Reduced font size */
+        font-size: 8vw; /* Reduced font size */
     }
 
     .page-content .buttons a {
-        font-size: 10px; /* Reduced font size */
+        font-size: 0.8rem; /* Reduced font size */
         min-width: 90px; /* Adjusted minimum width */
         padding: 8px 12px; /* Reduced padding */
     }
@@ -162,7 +154,7 @@ video {
 .navbar .logo {
     font-family: 'AngryBirds', sans-serif;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .navbar ul {
