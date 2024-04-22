@@ -160,6 +160,7 @@ video {
 .navbar ul {
     list-style-type: none;
     display: flex;
+    justify-content: center; /* Center align menu items */
 }
 
 .navbar ul a {
